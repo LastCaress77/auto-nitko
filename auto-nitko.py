@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
 
+# Author     : William Lorenzo
+# Tool       : Auto Nitko
+# Usage      : python3 auto-nitko.py ipaddress
+# Description: Find open HTTP/s Port and check them with Nitko
+
 import sys
 import socket
 
