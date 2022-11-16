@@ -8,6 +8,7 @@
 import sys
 import argparse
 import ipaddress
+import socket
 
 # Setup our help
 usage="%s -i IPv4 Address" % sys.argv[0]
@@ -22,3 +23,14 @@ except ValueError:
     print('%s is an invalid IP Address' % sys.argv[2])
 except:
     print('Syntax: %s -i <ip>' % sys.argv[0])
+
+# Scan for ports 80/443
+# Add 8000/8080/8443
+
+def scanner(port):
+    try:
+        connect = s.connect((target,port))
+        return True
+    except:
+        return False
+
